@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+    </head>
+    <body>
+        <main>
+            <!-- &lt; คือ เครื่องหมายน้อยกว่่า &gt; คือ เครื่องหมายมากกว่า &nbsp; คือ การกด spacebar 1 ครัง-->
+            <h3><i><u>Paragraphs</u></i></h3>
+            <p class="paragraph">
+                Paragraphs เป็น element ของกลุ่มข้อความ โดยมี tag ลักษณะดังนี้ &lt;p&gt;...&lt;/p&gt; ทุกครั้งที่กำหนด tag ข้างต้นจะขึ้นบรรทัด
+                ใหม่ทุกครั้ง เช่น <br>
+                <strong>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Hello World&lt;/p&gt;</strong> <br>
+                ผลลัพธ์ : Hello World <br><br>
+            </p>
+            <h3><i>รูปแบบการ display</i></h3>
+            <ol>
+                <li>
+                    <p class="paragraph"> 
+                    &lt;p&gt;ฉันเป็น&nbsp;&nbsp;&nbsp;คนไทย&lt;/p&gt; <br>
+                    ต่อให้เว้นวรรคมากแค่ไหน ใน HTML จะเว้นได้แค่ 1 วรรคเท่านั้น <br>
+                    ผลลัพธ์ : ฉันเป็น คนไทย
+                    </p>
+                </li>
+                <li>
+                    <p class="paragraph"> 
+                    &lt;p&gt;<br>ฉัน<br>เป็น<br>คนไทย<br>&lt;/p&gt; <br>
+                    ต่อให้เว้นบรรทัดใน &lt;p&gt;...&lt;/p&gt; ข้อความจะต่อกันแต่จะเว้นกัน 1 วรรคเท่านั้น
+                    <!--Example-->
+                    <p>
+                        ผลลัพธ์ : ฉัน
+                        เป็น
+                        คน
+                        ไทย
+                    </p>
+                    </p>
+                </li>
+            </ol>
+            <p class="paragraph">การแก้ปัญหาการเว้นบรรทัดหรือการเว้นวรรคสามารถทำได้โดย &lt;pre&gt;...&lt;/pre&gt; ตัวอย่างเช่น 
+                <pre>
+                    หนึ่ง    สอง
+                    สาม    สี่
+                </pre> เป็นต้น นอกจากนี้ยังมีการเว้นบรรทัดโดยไม่ใช้ pre คือ &lt;br&gt; ตัวอย่างเช่น
+                <p>&lt;p&gt;ฉันเป็น&lt;br&gt;คนไทย&lt;/p&gt;</p> 
+                <p>ผลลัพธ์ :<br>ฉันเป็น<br>คนไทย</p>
+            </p>
+            <hr>
+        </main>
+    </body>
+</html>
