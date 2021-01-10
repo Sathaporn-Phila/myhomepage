@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+    </head>
+    <body>
+        <main>
+            <!-- &lt; คือ เครื่องหมายน้อยกว่่า &gt; คือ เครื่องหมายมากกว่า-->
+            <h3><i><u>Table</u></i></h3>
+            <p class="paragraph">
+                Table ใน HTML เปรียบเสมือนการสร้างตารางใน web page มี tag ที่ต้องใช้ดังนี้
+                <ul>
+                    <li>&lt;table&gt; เป็นการสร้างโครงตาราง</li>
+                    <li>&lt;tr&gt; เป็นการสร้างส่วน row</li>
+                    <li>&lt;th&gt; เป็นการสร้างส่วน heading ของตอน</li>
+                    <li>&lt;td&gt; เป็นการสร้างส่วน data ในตาราง</li>
+                </ul>
+                โดยมีวิธีการเขียนโค้ดดังนี้
+                <xmp>
+                    <table>
+                        <tr>
+                            <th>File name</th>
+                            <th>File extension</th>
+                        </tr>
+                        <tr>
+                            <td>Myname.py</td>
+                            <td>py</td>
+                        </tr>
+                        <tr>
+                            <td>element.html</td>
+                            <td>html</td>
+                        </tr>
+                    </table>
+                </xmp>
+                <table>
+                    <tr>
+                        <th>File name</th>
+                        <th>File extension</th>
+                    </tr>
+                    <tr>
+                        <td>Myname.py</td>
+                        <td>py</td>
+                    </tr>
+                    <tr>
+                        <td>element.html</td>
+                        <td>html</td>
+                    </tr>
+                </table>
+                <h3><u>Adding CSS</u></h3>
+                เพิมเส้นขอบสีดำและ background เป็นสีอื่น
+                <xmp>
+                    table, th, td {
+                        border: 1px solid black;
+                        background-color: white;
+                      }
+                </xmp>
+                ผลลัพธ์: <br>
+                <table class="test-table">
+                    <tr class="test-table">
+                        <th class="test-table">File name</th>
+                        <th class="test-table">File extension</th>
+                    </tr>
+                    <tr class="test-table">
+                        <td class="test-table">Myname.py</td>
+                        <td class="test-table">py</td>
+                    </tr>
+                    <tr class="test-table">
+                        <td class="test-table">element.html</td>
+                        <td class="test-table">html</td>
+                    </tr>
+                </table>
+            </p>
+            <hr>
+        </main>
+    </body>
+</html>

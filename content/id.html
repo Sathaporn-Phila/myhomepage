@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <style>
+            #city {color: red;}
+        </style>
+    </head>
+    <body>
+        <main>
+            <!-- &lt; คือ เครื่องหมายน้อยกว่่า &gt; คือ เครื่องหมายมากกว่า-->
+            <h3><i><u>Id</u></i></h3>
+            <p class="paragraph">
+                Id คือ attribue ที่มีไว้บ่งบอกความเป็นเฉพาะเจาะจงของ element เหมือนกับ class แต่สามารถมีได้ id เดียว สามารถใช้ร่วมกับ
+                CSS หรือ Javascripts
+            </p>
+            <xmp>
+                CSS
+                <style>
+                    #city {color: red;}
+                </style>
+                <p id="city">Bangkok</p>
+                Javascripts
+                <button onclick="myfunction()">Show Elements</button>
+                <p id="city"></p>
+                <script>
+                    function myfunction() {
+                        document.getElementById("city").innerHTML = "Bangkok";
+                    }
+                </script>
+            </xmp>
+            <p>
+                ผลลัพธ์ : <span><button onclick="myfunction()">Show Elements</button></span>
+            </p>
+            <p id="city"></p>
+            <script>
+                function myfunction() {
+                    document.getElementById("city").innerHTML = "Bangkok";
+                }
+            </script>
+            <hr>
+        </main>
+    </body>
+</html>

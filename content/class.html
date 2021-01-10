@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <style>
+            .city {color: red;}
+        </style>
+    </head>
+    <body>
+        <main>
+            <!-- &lt; คือ เครื่องหมายน้อยกว่่า &gt; คือ เครื่องหมายมากกว่า-->
+            <h3><i><u>Classes</u></i></h3>
+            <p class="paragraph">
+                class เป็น attributes ของ elements ใช้สำหรับระบุ element เฉพาะ นอกจากนี้ยังใช้ร่วมกับ CSS หรือ Javascripts ตัวอย่างเช่น
+            </p>
+            <xmp>
+                CSS
+                <style>
+                    .city {color: red;}
+                </style>
+                <p class="city">Bangkok</p>
+                Javascripts
+                <button onclick="myfunction()">Show Elements</button>
+                <p class="city"></p>
+                <script>
+                    function myfunction() {
+                        document.getElementsByClassName("city")[0].innerHTML = "Bangkok";
+                    }
+                </script>
+            </xmp>
+            <p>
+                ผลลัพธ์ : <span><button onclick="myfunction()">Show Elements</button></span>
+            </p>
+            <p class="city"></p>
+            <script>
+                function myfunction() {
+                    document.getElementsByClassName("city")[0].innerHTML = "Bangkok";
+                }
+            </script>
+        </main>
+    </body>
+</html>

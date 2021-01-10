@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+    </head>
+    <body>
+        <main>
+            <h3><i><u>CSS</u></i></h3>
+            <p class="paragraph">
+                CSS คือ ภาษาที่ไว้ใช้ร่วมกับ HTML เอาไว้ใช้ตกแต่ง web page มีวิธีเขียน 3 แบบคือ
+            </p>
+            <ul>
+                <li>Inline เขียนตรง element แท็กเปิดใน style attribute ตัวอย่างเช่น <xmp><h1 style="color: red">I'm a dark eyes</h1></xmp> 
+                    ผลลัพธ์ : <h1 style="color: red">I'm a dark eyes</h1></li>
+                <li>Internal เขียนตรง head มีลักษณะการเขียนดังนี้
+                    <xmp>
+                        <head>
+                            <style>
+                                h1 {color: red};
+                            </style>
+                        </head>
+                    </xmp>
+                </li>
+                <li>
+                    External คือ การเขียนภาษา CSS ไว้อีกไฟล์นึงแล้วให้ Link กับ HTML บริเวณ head ตัวอย่างเช่น
+                    <xmp>
+                        color.css File
+
+                        h1 {color: red;}
+
+                        myfile.html File
+                        
+                        <head>
+                            <link rel="stylesheet" href="color.css" type="text/css"
+                        </head>
+                    </xmp>
+                </li>
+            </ul>
+            <hr>
+        </main>
+    </body>
+</html>
