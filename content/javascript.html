@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script src="../javascript/ball.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="../css/ball.css">
+    </head>
+    <body>
+        <main>
+            <!-- &lt; คือ เครื่องหมายน้อยกว่่า &gt; คือ เครื่องหมายมากกว่า-->
+            <h3><i><u>Javascripts</u></i></h3>
+            <p class="paragraph">
+                ภาษา Javascripts เป็นภาษาที่ไว้ใช้โต้ตอบกับผู้ใช้ใน webpage มีลักษณะแท็กเป็น &lt;script&gt; สามารถเรียกใช้ได้ 2 แบบ
+            </p>
+            <ol>
+                <li>แบบ Internal สามารถเรียกใช้ได้ใน HTML มีลักษณะการเขียนโค้ดดังนี้ <span><xmp><script>...</script></xmp></span></li>
+                <li>แบบ External เรียกใช้ผ่าน source File <span><xmp><script src="..."></script></xmp></span> ไม่มีคำสั่งภายใน script tag
+                    เพราะถูกเรียกจากด้านนอก</li>    
+            </ol>
+            <div id="basic-javascript" class="box">
+                <h4><u>Basic Javascript</u></h4>
+                <xmp>
+                    <p id="test"></p>
+                    <script>
+                        document.getElementById("test").innerHTML = "Hello World";
+                    </script>
+                    <noscript>This Javascript is not support for this HTML</noscript>
+                </xmp>
+                <p>คำสั่งใน Javascript เป็นการเปลี่ยนแปลงใน HTML แต่ถ้า script ไม่ทำงาน noscript จะทำงานแทน ผลลัพธ์:
+                    <span>
+                        <p id="test"></p>
+                            <script>
+                                document.getElementById("test").innerHTML = "Hello World";
+                            </script>
+                            <noscript>This Javascript is not support for this HTML</noscript>
+                    </span>
+                </p>
+            </div>
+            <div id="advance-javascript" class="box">
+                <h4><u>Advance Javascript : Integrated with CSS</u></h4>
+                <p>เปลี่ยนสีบอล</p>
+                <form id="color">
+                    <p>RGB color</p>
+                    <label for="red">R:</label>
+                    <input type="number" id="red" name="red" min="0" max="255" value="0">
+                    <label for="green">G:</label>
+                    <input type="number" id="green" name="green" min="0" max="255" value="0">
+                    <label for="blue">B:</label>
+                    <input type="number" id="blue" name="blue" min="0" max="255" value="0">
+                </form>
+                <button onclick="ball()">Change Color</button>
+                <div class="ball"></div>
+                <xmp>
+                    HTML file
+                    <head>
+                        <script src="../javascript/ball.js" type="text/javascript"></script>
+                        <link rel="stylesheet" type="text/css" href="../css/ball.css">
+                    </head>
+                    <form id="color">
+                        <p>RGB color</p>
+                        <label for="red">R:</label>
+                        <input type="number" id="red" name="red" min="0" max="255" value="0">
+                        <label for="green">G:</label>
+                        <input type="number" id="green" name="green" min="0" max="255" value="0">
+                        <label for="blue">B:</label>
+                        <input type="number" id="blue" name="blue" min="0" max="255" value="0">
+                    </form>
+                    <button onclick="ball()">Change Color</button>
+                    <div class="ball"></div>
+
+
+                    CSS file
+                    .ball{
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        position: relative;
+                        margin-top: 40px;
+                        margin-left: 20px;
+                        animation-name: cubic-bezier-move;
+                        animation-duration: 2s;
+                        animation-iteration-count: infinite;
+                        background-color: rgb(0, 0, 0);
+                        animation-timing-function: cubic-bezier(0.2, 0.8, 1.4, 0.1);
+                    }
+                    @keyframes cubic-bezier-move {
+                        0% {
+                            left: 0px;
+                        }
+                        100% {
+                            left: 80%;
+                        }
+                    }
+
+
+                    Javascript file
+                    function ball() {
+                        var mylist = [];
+                        var x = document.getElementById("color");
+                        for (var i=0; i < x.length; i++ ){
+                            mylist.push(x[i].value);
+                        }
+                        var color = rgb(mylist);
+                        set_ball_color(color);    
+                    }
+                    function rgb([r,g,b]) {
+                        return "rgb("+r+","+g+","+b+")"
+                    }
+                    function set_ball_color(data){
+                    
+                        document.getElementsByClassName("ball")[0].style.backgroundColor = data;
+                    }
+                </xmp>
+                <p>
+                    ในส่วนของ HTML file จะมีการเรียก script source จากด้านนอก ซึ่ง function จะทำงานก็ต่อเมื่อกดปุ่ม Change Color
+                    โดยรับ Input จาก form element ซึ่งในฟังก์ชันมีการเก็บค่าแบบ for loop ยัดไปใน array พอได้ข้อมูลแล้วแปลงเป็น RGB color
+                    เพื่อนำไปใช้ CSS ผ่าน command <ins><span><xmp>document.getElementsByClassName("ball")[0].style.backgroundColor = data;</xmp></span></ins>
+                    
+                </p>
+            </div>
+        </main>
+    </body>
+</html>

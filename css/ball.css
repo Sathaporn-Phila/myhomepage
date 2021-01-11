@@ -1,0 +1,21 @@
+.ball{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 20px;
+    animation-name: cubic-bezier-move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    background-color: rgb(0, 0, 0);
+    animation-timing-function: cubic-bezier(0.2, 0.8, 1.4, 0.1);
+}
+@keyframes cubic-bezier-move {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: 80%;
+    }
+}
