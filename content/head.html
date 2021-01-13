@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+    </head>
+    <body>
+        <main>
+            <!-- &lt; คือ เครื่องหมายน้อยกว่่า &gt; คือ เครื่องหมายมากกว่า-->
+            <h3><i><u>Head</u></i></h3>
+            <p class="paragraph">
+                Head เป็น metadata ที่อยู่ระหว่าง &lt;html&gt; กับ &lt;body&gt; ซึ่ง metadata นั้นจะไม่แสดงออกมาทางหน้าจอ Head ประกอบด้วย
+                6 อย่าง คือ
+            </p>
+            <ol>
+                <li>
+                    title เป็นหัวข้อชื่อ tab ซึ่งอยู่บน browser toolbar สิ่งนี้จำเป็นต่อ search engine ลักษณะโค้ดดังนี้
+                    <xmp class="box">
+                    <!DOCTYPE html>
+                        <html>
+                            <head>
+                                <title>A Meaningful Page Title</title>
+                            </head>
+                            <body>
+                            The content of the document......
+                            </body>
+                        </html>
+                    </xmp>
+                </li>
+                <li>
+                    style เป็นการกำหนด CSS ใน tag มีลักษณะการเขียนโค้ดดังนี้
+                    <xmp class="box">
+                        <!DOCTYPE html>
+                            <html>
+                                <head>
+                                    <title>A Meaningful Page Title</title>
+                                    <style>
+                                        body {background-color: powderblue;}
+                                        h1 {color: red;}
+                                        p {color: blue;}
+                                    </style>
+                                </head>
+                                <body>
+                                The content of the document......
+                                </body>
+                            </html>
+                    </xmp>    
+                </li>
+                <li>link เป็นการเรียก source จาก external ตัวอย่างโค้ด เช่น &lt;link rel="stylesheet" href="mystyle.css&gt;</li>
+                <li>meta เป็น element พิเศษที่ใช้เรียกตัวอักษรพิเศษ คำอธิบายเพจ keyword ผู้แต่งเว็บเพจ viewport (viewport คือ การปรับ scale ตาม device) เป็นต้น ตัวอย่างโค้ด เช่น
+                    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                </li>
+                <li>script เป็น element ที่ใช้เรียกภาษา javascript ตัวอย่างเช่น 
+                    <xmp class="box">
+                        <script>
+                            function myFunction() {
+                              document.getElementById("demo").innerHTML = "Hello JavaScript!";
+                            }
+                        </script>                            
+                    </xmp>
+                </li>
+                <li>base เป็น element ที่ base url หรือ target ไปที่ relative url ตัวอย่างโค้ดเช่น 
+                    <xmp class="box">
+                        <head>
+                            <base href="https://www.w3schools.com/" target="_blank">
+                        </head>
+                            
+                        <body>
+                            <a href="tags/tag_base.asp">HTML base Tag</a>
+                        </body>
+                    </xmp>
+                    ในที่นี้จะเรียก www.w3schools.com ตามด้วย tags/tag_base.asp แล้วขึ้น tab ใหม่เป็น www.w3schools.com/tags/tag_base.asp
+                </li>
+            </ol>
+            <hr>
+        </main>
+    </body>
+</html>
