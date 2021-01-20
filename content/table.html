@@ -11,9 +11,9 @@
                 Table ใน HTML เปรียบเสมือนการสร้างตารางใน web page มี tag ที่ต้องใช้ดังนี้
                 <ul>
                     <li>&lt;table&gt; เป็นการสร้างโครงตาราง</li>
-                    <li>&lt;tr&gt; เป็นการสร้างส่วน row</li>
-                    <li>&lt;th&gt; เป็นการสร้างส่วน heading ของตอน</li>
-                    <li>&lt;td&gt; เป็นการสร้างส่วน data ในตาราง</li>
+                    <li>&lt;tr&gt; เป็นการสร้าง row 1 row</li>
+                    <li>&lt;th&gt; เป็นการกำหนด data ในตารางให้มีลักษณะเป็น heading</li>
+                    <li>&lt;td&gt; เป็นการกำหนด data ในตาราง</li>
                 </ul>
                 โดยมีวิธีการเขียนโค้ดดังนี้
                 <xmp>
@@ -70,6 +70,63 @@
                     </tr>
                 </table>
             </p>
+            <h3>การทำให้ข้อมูลในตารางกินพื้นที่มากกว่า 1 ช่องในแนวนอน</h3>
+            <p class="paragraph">การทำให้ข้อมูลในตารางกินพื้นที่มากกว่า 1 ช่องในแนวนอน สามารถทำได้โดยเพิ่ม attribute คือ rowspan ตัวอย่างเช่น</p>
+            <xmp>
+                <table>
+                    <tr>
+                        <th rowspan="2">File name</th>
+                    </tr>
+                    <tr>
+                        <td>Myname.py</td>
+                        <td>py</td>
+                    </tr>
+                    <tr>
+                        <td>element.html</td>
+                        <td>html</td>
+                    </tr>
+                </table>
+            </xmp>
+            <p>บริเวณทีเป็น &lt;th&gt;File name&lt;/th&gt; จะกินพื้นที่ไป 2 ช่องแนวนอน</p>
+            <table class="test-table">
+                <tr class="test-table">
+                    <th class="test-table" rowspan="2">File name</th>
+                </tr>
+                <tr class="test-table">
+                    <td class="test-table">Myname.py</td>
+                    <td class="test-table">py</td>
+                </tr>
+                <tr class="test-table">
+                    <td class="test-table">element.html</td>
+                    <td class="test-table">html</td>
+                </tr>
+            </table>
+            <h3>การทำให้ข้อมูลในตารางกินพื้นที่มากกว่า 1 ช่องในแนวตั้ง</h3>
+            <p class="paragraph">การทำให้ข้อมูลในตารางกินพื้นที่มากกว่า 1 ช่องในแนวตั้ง สามารถทำได้โดยเพิ่ม attribute คือ colspan ตัวอย่างเช่น</p>
+            <xmp>
+                <table>
+                    <tr>
+                        <th>File name</th>
+                        <th>File name</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Myname.py</td>
+                        <td colspan="2">py</td>
+                    </tr>
+                    
+                </table>
+            </xmp>
+            <p>บริเวณทีเป็น &lt;td&gt;Myname.py&lt;td&gt; กับ &lt;td&gt;py&lt;td&gt;จะกินพื้นที่ไป 2 ช่องแนวตั้ง</p>
+            <table class="test-table">
+                <tr class="test-table">
+                    <th class="test-table">File name</th>
+                    <th class="test-table">File extension</th>
+                </tr>
+                <tr class="test-table">
+                    <td class="test-table" colspan="2">Myname.py</td>
+                    <td class="test-table" colspan="2">py</td>
+                </tr>
+            </table>
             <hr>
         </main>
     </body>
