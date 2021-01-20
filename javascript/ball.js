@@ -15,3 +15,6 @@ function set_ball_color(data){
 
     document.getElementsByClassName("ball")[0].style.backgroundColor = data;
 }
+function myfunction3(){
+    alert("Hello Mars")
+}

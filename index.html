@@ -3,18 +3,19 @@
     <head>
         <title>HTML learning</title>
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <script src="javascript/control-nav.js"></script>
     </head>
     <body>
         <main>
             <div class="container">
                 <header id="html-header">
-                    <h1>Welcome to HTML learning !</h1>
+                    <h1>Welcome to HTML/Javascript learning !</h1>
                 </header>
                 <div id="content-part">
                     <div class="group-content">
-                        <h1><i><u>HTML Topics</u></i></h1>
+                        <button class="nav-button" onclick="button_activated('html-nav')">HTML Topics</button>
                         <!--side-nav-->
-                        <nav>
+                        <nav id="html-nav">
                             <a href="content/element.html" target="display-frame">Elements</a>
                             <a href="content/attributes.html" target="display-frame">Attributes</a>
                             <a href="content/heading.html" target="display-frame">Headings</a>
@@ -36,7 +37,7 @@
                             <a href="content/javascript.html" target="display-frame">Javascripts</a>
                             <a href="content/file_path.html" target="display-frame">File Path</a>
                             <a href="content/head.html" target="display-frame">Head</a>
-                            <a href="#">Layout</a>
+                            <a href="content/layout.html" target="display-frame">Layout</a>
                             <a href="#">Responsive</a>
                             <a href="#">Computercode</a>
                             <a href="#">Semantics</a>
@@ -47,6 +48,10 @@
                             <a href="#">Charset</a>
                             <a href="#">URL Encode</a>
                             <a href="#">HTML vs XHTML</a>
+                        </nav>
+                        <button class="nav-button" onclick="button_activated('javascript-nav')">Javascripts Topics</button>
+                        <nav id="javascript-nav">
+                            <a href="javascript-content/whereto.html" target="display-frame">Where to place scripts</a>
                         </nav>
                     </div>
                     <!--ตำแหน่งที่ใช้ display content-->
