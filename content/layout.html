@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <style>
+            .layout {width : 500px;
+                height: 400px;
+                display : flex;
+                flex-direction: column;
+            }
+            .top {height: 12%;
+                background-color: mediumaquamarine;
+                justify-self: center;
+            }
+            .footer {height: 12%;
+                background-color: mediumaquamarine;
+            }
+            .main_body {
+                height: 76%;
+                display: flex;
+                flex-direction: row;
+            }
+            .side-nav {
+                width: 20%;
+                background-color: yellow;
+            }
+            .side-nav a {display: block;margin: 12px;}
+            .side-nav a:link{color: black;}
+        </style>
+    </head>
+    <body>
+        <main>
+            <!-- &lt; คือ เครื่องหมายน้อยกว่่า &gt; คือ เครื่องหมายมากกว่า-->
+            <h3><i><u>Layout</u></i></h3>
+            <p class="paragraph">
+                Layout เป็นลักษณะคล้ายตารางซึ่งสามารถพบได้ในเว็บไซต์ทั่วไป ตัวอย่างเช่น
+            </p>
+            <div class="layout">
+                <div class="top">Cities</div>
+                <div class="main_body">
+                    <div class="side-nav">
+                        <a href="#">Bangkok</a>
+                        <a href="#">Jakarta</a>
+                        <a href="#">London</a>
+                    </div>
+                    <div class="description">
+                        <article><b>Bangkok</b><p class="paragraph">Bangkok เป็นเมืองหลวงของประเทศไทย</p></article>
+                    </div>
+                </div>
+                <div class="footer"></div>
+            </div>
+            <p class="paragraph"></p>
+                HTML มีบางสิ่งที่เอาไว้เรียกส่วนเฉพาะของ webpage มีดังนี้
+                <ul>
+                    <li>&lt;header&gt; เป็นส่วนที่ไว้เรียก topic ของ section นั้นๆ</li>
+                    <li>&lt;nav&gt; เป็นส่วนที่ไว้กลุ่ม link target</li>
+                    <li>&lt;section&gt; เป็นส่วนที่ไว้เรียกกลุ่มข้อมูลใน webpage</li>
+                    <li>&lt;article&gt; เป็นส่วนที่ไว้เรียกกลุ่มที่มีเนื้อหาเฉพาะตนเอง ไม่เกี่ยวกับ section อื่น</li>
+                    <li>&lt;aside&gt; เป็นส่วนที่ไว้เรียกกลุ่มข้อมูลแถบข้าง</li>
+                    <li>&lt;footer&gt; เป็นส่วนที่ไว้เรียกกลุ่ม footer</li>
+                    <li>&lt;details&gt; เป็นส่วนที่ไว้เรียกการอธิบายของข้อมูล</li>
+                    <li>&lt;summary&gt; เป็นส่วนที่ไว้เป็น topic ของ &lt;details&gt;</li>
+                </ul>
+                นอกจากนี้ Layout ยังสามารถถูกจัดการได้ด้วยภาษา CSS เช่น flex grid หรือยังเป็น Bootstrap เป็นต้น
+            </p>
+            <hr>
+        </main>
+    </body>
+</html>
