@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+#html-header {background-image: url(../img/star-bg.jpg);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.circle-btn:hover {
+    animation-name: resize-border;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+@keyframes resize-border{
+    0% {
+            font-size: medium;
+            background-image: linear-gradient(180deg,#87cefa,white,#87cefa);
+    }
+    50% {
+            border: 5px solid black;
+            font-size: large;
+            background-image: linear-gradient(180deg,#b8fca4,white,#b8fca4);
+    }
+    100% {
+            font-size: medium;
+            background-image: linear-gradient(180deg,#87cefa,white,#87cefa);
+    }
+}
+.group-content {width : 15%;
+        text-align : center;   
+    }
+.text {width: 85%;
+background-color: white;
+}
+.circle-btn {
+    color: black;
+    width: 10%;
+    border: black 5px solid;
+    border-radius: 50%;
+    font-family: 'Courgette', cursive, monospace;
+    font-size: medium;
+    background-image: linear-gradient(180deg,#87cefa,white,#87cefa);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+}
+#html-top {
+    width:80%;
+    text-align: center;
+    font-family: 'Courgette', cursive, monospace;
+    color: orange;
+}
+#js-nav a {display: block;
+    padding: 5px 0px 5px 0px ;
+}
+#js-nav a:hover{
+        background-color: black;
+        color: white;
+}
+#js-nav {
+    width: 12%;
+    overflow-y: scroll;
+    height: 60%;
+    position: fixed;
+    background-color: lightcyan;}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.paragraph{text-indent: 15px;}
+xmp {font-size: 15px;}
+.box{
+    background-color: blanchedalmond;
+    border: 5px solid black;
+}
+.indent-box{
+    padding-left: 2%;
+}
