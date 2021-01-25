@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #resize {
+                width: 60%;
+                height: auto;
+            }
+            #non-resize {
+                width: 200px;
+                height: 200px;
+            }
+        </style> 
+    </head>
+    <body>
+        <main>
+            <!-- &lt; คือ เครื่องหมายน้อยกว่่า &gt; คือ เครื่องหมายมากกว่า-->
+            <h3><i><u>Responsive web design</u></i></h3>
+            <p class="paragraph">
+                Responsive web design คือ การออกแบบเว็บให้มีความเหมาะสมกับทุก device ไม่ว่าจะเป็นโทรศัพท์หรือโน้ตบุ้คหรือจอต่างๆที่มีขนาดความกว้างและยาวไม่เท่ากัน
+                โดยการออกแบบ Responsive web design สามารถใช้ได้ทั้ง HTML และ CSS เพื่อปรับให้เว็บไซด์ของเราปรับขนาดได้อัตโนมัติ
+            </p>
+            <p class="paragraph">
+                ตัวอย่างโค้ด HTML ที่เป็น responsive ให้เข้ากับ device ต่างๆ เช่น
+            </p>
+            <xmp>
+                <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                </head>
+            </xmp>
+            <p class="paragraph">ต่อมาจะกล่าวถึง CSS ซึ่งจะมีหัวข้อต่อไปนี้</p>
+            <h3><i><u>Responsive Image</u></i></h3>
+            <p class="paragraph">Responsive Image คือ ขนาดของภาพที่ปรับตามขนาดของเว็บไซต์ โดยสามารถทำได้ในรูปแบบของ CSS ตัวอย่างเช่น</p>
+            <div class="box">
+                <p class="paragraph">ใช้ขนาดของ width ที่เป็น %</p>
+                <pre>
+                <code>
+                .img {
+                    width : 50px
+                }
+                </code>
+                
+                <a href="../example/responsive-img.html" target="_blank" class="paragraph"><button>Test function</button></a><br>
+                </pre>
+            </div>
+            <div class="box">
+                <p class="paragraph">หรือจะใช้ตัวที่เป็น max-width กรณีขนาดเท่ากับขนาดของเว็บไซต์ซึ่งสามารถกำหนดอัตราส่วนเป็น % ตัวอย่างเช่น</p>
+                <xmp>
+                <img src="../img/my_profile.jpg" style="max-width: 100%;height: auto;">
+                </xmp>
+                <pre>
+                <a href="../example/responsive-img2.html" target="_blank"><button>Test function</button></a>   
+                </pre>
+                <p class="paragraph">ไม่ว่าจะปรับขนาดเว็บไซต์ขนาดเท่าไหร่ก็ตาม รูปภาพก็ยังโชว์เต็มรูปภาพ</p> 
+            </div>
+            <div class="box">
+                <p class="paragraph">นอกจากนี้ยังมีคำสั่ง &lt;picture&gt; ที่ช่วยให้มีหลายรูปภาพในรูปเดียวโดยประยุกต์เข้ากับ attributes media ตัวอย่างเช่น</p>
+                <xmp>
+                <picture>
+                    <source srcset="../img/kiwi.jpg" media="(max-width:600px)">
+                    <source srcset="../img/waterbear.jpg" media="(max-width:1500px)">
+                    <source srcset="../img/my_profile.jpg">
+                    <img src="../img/kiwi.jpg" style="width:50%;height: auto;">
+                </picture>
+                </xmp>
+                <pre>
+                    <a href="../example/responsive-img3.html" target="_blank"><button>Test function</button></a>
+                </pre>
+                <p class="paragraph">เมื่อถึง width ของเว็บไซต์ระดับหนึ่งรูปภาพก็เปลี่ยนไป</p>
+            </div><br>
+            <h3><i><u>Responsive Text</u></i></h3>
+            <p class="paragraph">การทำให้ text ปรับตามขนาดเว็บไซต์ สามารถทำได้โดย set font size เป็นหน่วย vw โดยหน่วยนี่มีชื่อเรียกเต็มว่า viewport width
+                ตัวอย่างโค้ดเช่น
+            </p>
+            <div class="box">
+                <xmp>
+                    <h5 style="font-size:4vw;">Hello world</h5>
+                </xmp>
+                <p class="paragraph">เมื่อลองขยายหรือลดขนาดเว็บไซต์ ตัวอักษรจะขนาดเป็น 4% ของความกว้างของเว็บไซต์ตลอดเวลา</p>
+                <h5 style="font-size:4vw;" class="paragraph">Hello world</h5>
+            </div>
+            <hr>
+        </main>
+    </body>
+</html>

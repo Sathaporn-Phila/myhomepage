@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript learning</title>
+        <link rel="stylesheet" href="css/javascript-style.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="javascript/ball.js"></script>
+        <script>
+            function myfunction1(){
+                alert("Hello Sun");
+            }
+        </script>
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div id="html-header" class="html-header">
+                    <header id="html-top">
+                        <h1>Welcome to Javascript learning !</h1>
+                    </header>
+                    <a href="index.html" class="circle-btn">HTML</a>
+                    <a href="js-learning.html" class="circle-btn">Javascript</a>
+                </div>
+                <div class="content">
+                    <div class="group-content">
+                        <!--side-nav-->
+                        <nav id="js-nav">
+                            <a href="#whereto">Where to place script</a>
+                            <a href="#output">Output</a>
+                        </nav>                   
+                    </div>
+                    <div class="text">
+                        <section id="whereto">
+                            <h3><i><u>Where to place script</u></i></h3>
+                            <div class="indent-box">
+                                <script>
+                                    function myfunction2(){
+                                        alert("Hello Moon");
+                                    }
+                                </script>
+                                <!-- &lt; คือ เครื่องหมายน้อยกว่่า &gt; คือ เครื่องหมายมากกว่า-->
+                                <p class="paragraph">
+                                    script ของ javascript มีลักษณะดังนี้
+                                    <xmp class="box">
+                                        <script>
+                                            document.getElementById("demo").innerHTML = "My First JavaScript";
+                                        </script>
+                                    </xmp>
+                                    โดย script นั้นสามารถเขียนได้แบบ Internal หรือ External
+                                </p>
+                                <br><br>
+                                <h3><i><u>Internal</u></i></h3>
+                                <p class="paragraph">การเขียนแบบ Internal คือการเขียนโค้ด javascript ไว้ในไฟล์ html เขียนได้ในบริเวณ &lt;head&gt; หรือ &lt;body&gt;ตัวอย่างเช่น </p>
+                                <xmp class="box">
+                                    <head>
+                                        <script>
+                                            function myfunction1(){
+                                                alert("Hello Sun");
+                                            }
+                                        </script>
+                                    </head>
+                                    <body>
+                                        <script>
+                                            function myfunction2(){
+                                                alert("Hello Moon");
+                                            }
+                                        </script>
+                                    </body>
+                                </xmp>
+                                <form>
+                                    <input type="button" onclick="myfunction1()" value="Test Hello Sun">
+                                    <input type="button" onclick="myfunction2()" value="Test Hello Moon">
+                                </form>
+                                <br><br>
+                                <h3><i><u>External</u></i></h3>
+                                <p class="paragraph">การเขียนแบบ External คือการเขียนโค้ด javascript แยกกับไฟล์ html แต่สามารถเรียกใช้ function ผ่าน javascript ได้โดย &lt;script src="..."&gt; ตัวอย่างเช่น</script>  </p>
+                                <xmp class="box">
+                                    <head>
+                                        <script src="../javascript/ball.js"></script>
+                                    </head>
+                                </xmp>
+                                <p class="paragraph">การเขียนจาก External ไม่ต้องมีโค้ด javascript ใน &lt;script&gt; เพราะจะถูกเรียกคำสั่งจากด้านนอกแทนอย่างเช่นใน
+                                    ไฟล์ ball.js มี function myfunction3 ซึ่งจะ alert อะไรบางอย่างบนหน้าจอ
+                                </p>
+                                <button onclick="myfunction3()">Test Hello Mars</button>
+                            </div>
+                        </section>
+                        <br>
+                        <br>
+                        <section id="output">
+                            <h3><i><u>Output</u></i></h3>
+                            <div class="indent-box">
+                                <p class="paragraph">Output ใน Javascript สามารถแสดงผลลัพธ์ได้ 4 หนทาง</p>
+                                <br>
+                                <h3><i><u>ใช้ innerHTML</u></i></h3>
+                                <p class="paragraph">เพื่อการเข้าถึง HTML element จำเป็นต้องใช้ id คือ document.getElementById(id) ตัวอย่างเช่น</p>
+                                <xmp class="box">
+                                <p id="demo"></p>
+                                <script>
+                                    document.getElementById("demo").innerHTML = "Hello World";
+                                </script>
+                                </xmp>
+                                <p class="paragraph">เมื่อทำการกด Show element ตัว HTML content จะมีการเปลี่ยนแปลงให้โชว์ Hello World</p>
+                                <button onclick="document.getElementById('demo').innerHTML = 'Hello World'">Show Element</button>
+                                <button onclick="document.getElementById('demo').innerHTML = ''">Hide Element</button>
+                                <div class="box">
+                                    <p id="demo" class="paragraph"></p>
+                                </div>
+                                <br>
+                                <br>
+                                <h3><i><u>ใช้ document.write()</u></i></h3>
+                                <p class="paragraph">การใช้ document.write() เป็นการแสดงผลลัพธ์บน HTML ไม่ควรใช้หลังจากข้อมูลบนเว็บเพจ show บนเว็บเพจ เพราะจะทำให้ข้อมูลบนเว็บเพจสูญหาย ตัวอย่างโค้ด
+                                    document.write() เช่น
+                                </p>
+                                <xmp class="box">
+                                    <script>document.write("Hello Sun");</script>
+                                </xmp>
+                                <p class="paragraph">ผลลัพธ์ : </p>
+                                <div class="box">
+                                    <script>
+                                        document.write("Hello Sun");
+                                    </script>
+                                </div>
+                                <br>
+                                <br>
+                                <h3><i><u>ใช้ alert()</u></i></h3>
+                                <p class="paragraph">การใช้ alert(text) เป็นการไว้ pop-up ข้อความออกมา ตัวอย่างเช่น</p>
+                                <xmp class='box'>
+                                    <script>
+                                        alert("Hello Moon");
+                                    </script>
+                                </xmp>
+                                <p class="paragraph">
+                                    เมื่อทำการกดปุ่ม จะมี pop-up ข้อความบางอย่างออกมา
+                                </p>
+                                <button onclick="alert('Hello Moon');">Test function</button>
+                                <br>
+                                <br>
+                                <h3><i><u>ใช้ console.log()</u></i></h3>
+                                <p class="paragraph">การใช้ console.log() เป็นการใช้ debugged code บน HTML หรือ script ตัวอย่างเช่น</p>
+                                <xmp class="box">
+                                    <script>
+                                        console.log("Surprising");
+                                    </script>
+                                </xmp>
+                                <script>
+                                    console.log("Surprising");
+                                </script>
+                                <p class="paragraph">ลองกดปุ่ม F12 จะเห็นคำว่า Surprising</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
